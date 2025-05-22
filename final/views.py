@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.contrib import messages
@@ -27,9 +27,9 @@ def home_view(request):
 
 def generate_captcha():
     images = [
-        {'image': 'cup.jpg', 'answer': 'cup', 'answer':'Cup'},
-        {'image': 'lion.jpg', 'answer': 'lion', 'answer':'Lion'},
-        {'image':'bicycle.jpg', 'answer': 'bicycle', 'answer':'Bicycle'},
+        {'image': 'cups.jpg', 'answer': 'cup', 'answer':'Cup'},
+        {'image': 'lions.jpg', 'answer': 'lion', 'answer':'Lion'},
+        {'image':'bicycles.jpg', 'answer': 'bicycle', 'answer':'Bicycle'},
     ]
     captcha = random.choice(images)
     return captcha
