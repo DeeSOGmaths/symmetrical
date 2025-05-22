@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html lang = en>
+    <head>
+        {% load static %}
+       <title> Project test </title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel = "stylesheet" type = "text/css" href = "{% static 'captcha.css' %}">
+       <link rel = "icon" type = "image/png" href = "{% static 'gold.png' %}">
+    </head> 
+    <body>
+
+        <h1 class = "first"> Captcha verification site </h1>
+
+        <h3 class = "head"> To complete registration please verify captcha </h3>
+
+        <h4 class = "head"> Enter the name of the image below</h4>
+   <form method="post">
+    {% csrf_token %}
+    <img src="{% static captcha_image %}" alt="CAPTCHA image" class = "image">
+    {{ form.as_p }}
+    <button type="submit" class = "button">Submit</button>
+    {% if error %}
+        <p style="color: red">{{ error }}</p>
+    {% endif %}
+</form>
+
+   <p id = "paragraph"><b>Please verify </b></p>
+
+   {% if success %}
+<script>
+         alert("Successfully Verified");
+</script> 
+   {% endif %}
+</body>
+</html>
+
