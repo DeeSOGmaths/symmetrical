@@ -28,7 +28,6 @@ def home_view(request):
 def generate_captcha():
     images = [
         {'image': 'cups.jpg', 'answer': 'cup', 'answer':'Cup'},
-        {'image': 'lions.jpg', 'answer': 'lion', 'answer':'Lion'},
         {'image':'bicycles.jpg', 'answer': 'bicycle', 'answer':'Bicycle'},
     ]
     captcha = random.choice(images)
