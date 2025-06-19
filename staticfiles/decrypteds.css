@@ -1,0 +1,22 @@
+/*Global styles */
+
+h1{
+    text-align:center;
+    color:rgb(13, 78, 8);
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+p{
+    text-align:center;
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

@@ -1,0 +1,94 @@
+h1{
+    text-align:center;
+    color:rgb(13, 78, 8);
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+#encrypted{
+    text-align:center
+}
+.but{
+    text-align:center;
+    margin-top:60px
+}
+#cop-key{
+     padding:10px 20px 10px 20px;
+    width:30%;
+    background-color:rgb(13, 78, 8);
+    border:none;
+    border-radius:30px;
+    color:white
+}
+#cop-key:hover{
+     background-color:rgb(9, 54, 6);
+}
+.note{
+    text-align:center;
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.decrypt{
+    text-align:center;
+    margin-top:10%
+}
+.de-but{
+    padding:10px 15px 10px 15px;
+    width:20%;
+    background-color:rgb(116, 105, 10);
+    border:none;
+    border-radius:30px;
+    color:white
+
+}
+.de-but:hover{
+    background-color:rgb(75, 68, 7);
+}
+a{
+    text-decoration:none;
+    color:white;
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* mobile responsiveness */
+@media (max-width:768px){
+#cop-key{
+     padding:14px 20px 14px 20px;
+    width:50%;
+    background-color:rgb(13, 78, 8);
+    border:none;
+    border-radius:30px;
+    color:white
+}
+#cop-key:hover{
+     background-color:rgb(9, 54, 6);
+}
+.de-but{
+    padding:12px 15px 12px 15px;
+    width:35%;
+    background-color:rgb(116, 105, 10);
+    border:none;
+    border-radius:30px;
+    color:white
+
+}
+.de-but:hover{
+    background-color:rgb(75, 68, 7);
+}
+
+}
+
