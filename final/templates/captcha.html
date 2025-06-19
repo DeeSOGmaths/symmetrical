@@ -1,30 +1,81 @@
 <!DOCTYPE html>
  <html lang = en>
     <head>
+       <meta charset="UTF-8">
         {% load static %}
        <title> Project test </title>
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel = "stylesheet" type = "text/css" href = "{% static 'paper.css' %}">
+       <link rel = "stylesheet" type = "text/css" href = "{% static 'captche.css' %}">
        <link rel = "icon" type = "image/png" href = "{% static 'bold.png' %}">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head> 
     <body>
 
-        <h1 class = "first"> Captcha verification site </h1>
+       <div class = "first-section">
+         <div class = "first-inner-div">
+        <h1 class = "first"> Safe Keeping Your Data  </h1>
 
-        <h3 class = "head"> To complete registration please verify captcha </h3>
+        <h3 class = "first-text"> Trust us with your data for safekeeping anywhere in the world<br> all you need is one click to hide and veiw your full information <br> Use our software at ease and with a rest assured mind of safety <br><br><br><br><br><br><br> Get started with project test right away!</h3>
+        <div class = "button-div"> <button type = "button" class = "button"> Get Started </button> </div>
+        </div>
+        <div class = "inner-div">
+          
+        <h1 class = "second-header"> Store Confidently </h1>
+         <h3 class = "second-text"> Our encryption mechanism is securely structured to fit you<br> join us now to get the experience of a lifetime, trustable and safe <br> Visit our social media handles to stay updated on latest trend</h3>
+        </div>
+      </div>
 
-        <h4 class = "head"> Enter the name of the image below</h4>
+       
+<div class = "form">
+       <div class = "login"> Login </div>
    <form method="post">
     {% csrf_token %}
+    {{form.as_p}}
+
+    {{ captcha_form.as_p }}
     <img src="{% static captcha_image %}" alt="CAPTCHA image" class = "image">
-    {{ form.as_p }}
+
+    <div class = "ans-button">
     <button type="submit" class = "button">Submit</button>
+    </div>
     {% if error %}
         <p style="color: red">{{ error }}</p>
     {% endif %}
 </form>
 
-   <p id = "paragraph"><b>Please verify </b></p>
+   <p id = "paragraph"><b>Please verify to proceed to encryption page</b></p>
+
+</div>
+
+
+<footer class = "section3">
+   <div class = "latest"> <div class = "span"> Project Test </div>   <div class = "last-div"> <img src = "{% static "captcha.png" %}" alt = "logo" id = "last-image"> </div> </div>
+   
+   <div id = "major">
+   <div class = "one">
+   <a href= "" class = "link link1"> Encryption Page </a> <br>
+   <a href= "" class = "link link2"> Decryption Page </a> <br>
+   <a href= "" class = "link link3"> About Us </a>
+   </div>
+
+   <div class="two">
+   <a href= "" class = "link link1"> Privacy Policy </a> <br>
+   <a href= "" class = "link link2"> Terms </a><br>
+   <a href= "" class = "link link3"> Contact Us </a>
+   </div>
+
+     <div class="three">
+   <a href= "" class = "link link1"> Locations </a><br>
+     <a href= "" class = "link link2"> Project Staff </a><br>
+     <a href= "" class = "link link3"> More </a>
+     </div>
+     
+   </div>
+   <p class = "menu"> Copyright 2025. All rights reserved</p> 
+</footer>
+
 
    {% if success %}
 <script>

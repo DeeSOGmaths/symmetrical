@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {% load static %}
+        <link rel = "stylesheet" type = "text/css" href = "{% static 'decrypteds.css' %}">
+        <link rel = "icon" type = "image/png" href = "{% static 'bold.png' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      
+        <title> Decrypted Page</title>
+    </head>
+
+    <body>
+<h1>Decrypted Data</h1>
+<p>{{ decrypted_data }}</p>
+
+</body>
+
+</html>

@@ -8,4 +8,8 @@ class Captcha(models.Model):
 
     def __str__(self):
         return self.answer
+    
+class Login(models.Model):
+    email = models.CharField(max_length=100)
+
 

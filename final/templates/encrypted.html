@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {% load static %}
+        <link rel = "stylesheet" type = "text/css" href = "{% static 'encrypte.css' %}">
+        <link rel = "icon" type = "image/png" href = "{% static 'bold.png' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      
+        <title> Encrypted Page</title>
+    </head>
+
+
+    <body>
+<h1>Encrypted Data</h1>
+<p id = "encrypted">{{ encrypted_data }}</p>
+
+ <div class ="but"> <button onclick = "copyKey()" id = "cop-key"> Copy encrypted data </button> </div>
+
+  <p class = "note">Note: Your encrypted data needs to be copied in order to decrypt later.<br> Safe your encrypted data in a file for later use. <br> Also, when copying encrypted data you should neglect  ( prefix b ) and (" ", '', quotes) which are present. <br>  </p>
+
+
+
+  <div class = decrypt>
+<p> To decrypt this data press this button</p>
+
+<button type = "button" class ="de-but"> <a href = "{% url "decrypt" %}"> Decrypt </a> </button>
+
+</div>
+
+<script>
+       
+  const copybutton = document.getElementById('cop-key');
+  const textToCopy = document.getElementById('encrypted');
+
+  copybutton.addEventListener('click', () => {
+    navigator.clipboard.writeText(textToCopy.textContent).then(() => {
+      copybutton.textContent ='Copied!';
+      setTimeout(() => {
+        copybutton.textContent = 'Copy';
+      }, 2000);
+    });
+  });
+</script>
+
+
+</body>
+
+
+

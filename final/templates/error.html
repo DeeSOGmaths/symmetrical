@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {% load static %}
+        <link rel = "icon" type = "image/png" href = "{% static 'bold.png' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      
+        <title> Error Occured </title>
+        <style>
+              h1{text-align:center; color:rgb(13, 78, 8);  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;}
+
+    
+              p{text-align:center}
+        </style>
+    </head>
+
+<h1> An error occured </h1>
+
+<p> {{error}} </p>
